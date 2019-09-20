@@ -96,27 +96,19 @@ p{
 .social-links li a i{
     margin-left: 20px;
     margin-right: 20px;
-}
-
-.big-hero .social-links li a i{
-    position: relative;
-    top:-20px;
-}
-
-.social-links li a i{
-    font-size: 5em;
+    font-size: 6em;
 }
 
 .big-hero .show-desktop{
     position: relative;
-    top:-20px;
+    top:-30px;
     color: #0AC693;
     font-size: 7em;
-    margin-bottom:20px;
 }
 
 .green-area {
     background-color: #0AC693; 
+    margin-top: 4em;
 }
 
 
@@ -133,6 +125,8 @@ p{
 
 .post ul {
     list-style: none;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .post ul li {
@@ -221,9 +215,7 @@ p{
     width: 450px;
 }
 
-.bio-info{
-    width: 525px;
-}
+
 
 .contact * + * {
     margin-top: 1.5em;
@@ -316,6 +308,7 @@ footer .social-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-left: 5%;
     }
     
     .post ul li {
@@ -348,27 +341,48 @@ footer .social-links {
         display: flex;
         margin-top: 1em;
     }
+    
+    .big-hero .social-links li a i{
+        position: relative;
+        top:-20px;
+    }
 
-
-
-
-    /*TODO: FALTA CSS */
+    .bio-info{
+        width: 525px;
+    }
 } 
 
 @media only screen and (min-width: 1024px) {
 
-       /*TODO: FALTA CSS */
+    .post ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    .post ul:last-child{
+        justify-content: left;
+        margin-left: 5%;
+    }
 
-
+    .post article{
+        width: auto;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
-
-    /*TODO: FALTA CSS */
     .container {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
     }
+
+    .post ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
 }
