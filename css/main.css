@@ -91,22 +91,28 @@ p{
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 8em;
 }
 
 .social-links li a i{
-    position: relative;
-    top:-50px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
+.big-hero .social-links li a i{
+    position: relative;
+    top:-20px;
+}
+
+.social-links li a i{
+    font-size: 5em;
+}
+
 .big-hero .show-desktop{
     position: relative;
-    top:-95px;
+    top:-20px;
     color: #0AC693;
-    font-size: 6em;
-    margin-bottom:-50px;
+    font-size: 7em;
+    margin-bottom:20px;
 }
 
 .green-area {
@@ -262,13 +268,14 @@ p{
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
+    padding: 0px;
 }
 
 footer .social-links {
     margin: 0;
 }
 
-.menu li:last-child a{
+.menu li:hover a{
     color: red;
 }
 
