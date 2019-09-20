@@ -20,7 +20,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between
+    justify-content: space-around;
 }
 
 .src-only {
@@ -59,41 +59,55 @@ p{
     font-size: 1.6rem;
 }
 
+
 /* Big area */
 .big-hero img {
     width: 150px;
 }
 
 .big-hero h2 {
-    font-size: 1.875em;
+    font-size: 2em;
     font-weight: 700;
     letter-spacing: 0.002em;
     margin-top: 1em ;
 }
 
 .big-hero p {
-    font-size: 0.7em;;
+    font-size: 1em;;
     color: #D7DEE6;
-
+    padding: 0;
 }
 
 /* Social links*/
 .social-links{
     list-style: none;
     padding: 0;
-    margin-top: 3em;
+    margin-top: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: center
-
+    justify-content: center;
 }
 
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 8em;
 }
 
+.social-links li a i{
+    position: relative;
+    top:-50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.big-hero .show-desktop{
+    position: relative;
+    top:-95px;
+    color: #0AC693;
+    font-size: 6em;
+    margin-bottom:-50px;
+}
 
 .green-area {
     background-color: #0AC693; 
@@ -156,6 +170,16 @@ p{
 
 .about{
     margin-top: 2em;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+
+.about .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
 .about h2 {
@@ -165,9 +189,15 @@ p{
     margin: 2em;
 }
 
-.bio-info img{
-   width: 200px;
+.about h2{
+    text-align: center;
+    width: 100%;
 }
+
+.bio-info img{ 
+    width: 200px;
+}
+
 
 .bio-info p{
     font-size: 16px;
@@ -182,6 +212,11 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
+    width: 450px;
+}
+
+.bio-info{
+    width: 525px;
 }
 
 .contact * + * {
@@ -233,6 +268,10 @@ footer .social-links {
     margin: 0;
 }
 
+.menu li:last-child a{
+    color: red;
+}
+
 .menu {
     background-color: #112935;
     position: absolute;
@@ -254,11 +293,13 @@ footer .social-links {
     margin-top: 5px;
 }
 
-.menu li a {
+.menu li a{
     color: white;
     text-decoration: none;
-    
 }
+
+
+
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
