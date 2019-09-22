@@ -2,15 +2,15 @@
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
-*, ::before, ::after {
+*, ::before, ::after {      /*Esta regla se le aplica a todo la pagina web*/
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-size: calc(0.5em + 1vh);
+    box-sizing: border-box;     /*hace que todos los elementos su ancho total sea el ancho especificado por el usuario*/
+    font-size: calc(0.5em + 1vh);   /*Hace que el tamaño de las fuentes sea responsive*/
 }
 
 /* El estilo base para moviles */
-body {
+body {  /*Esta regla se le aplica a todo el body y le da color al fondo, a la letra, define una tipografia, el alineado del texto y el grosor del texto*/
     background-color: #112935;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -18,76 +18,76 @@ body {
     font-weight: 400;
 }
 
-.header {
+.header {       /*Esta regla se aplica solo al header y sus elementos y los hace ser flexibles y justifica el espaciado de los elementos a space-around*/
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;  /*hace que todos los elementos tengan el mismo espacio entre los border y entre si*/
 }
 
-.src-only {
+.src-only {     
     display: none;
 }
-
+                    /*a estas 2 reglas solo definen que el elemento no tengla display*/
 .hide-mobile {
     display: none;
 }
 
-p{
+p{  /*Esta regla se le aplica a los elementos p en el body y define su tamaño de letra,el espacio del contenido y la altura de la linea*/
     font-size: 0.75em;
     padding: 1rem;
     line-height: 25px;
 }
 
-.logo {
+.logo {     /*define el ancho y el margen del logo*/
     width: 90px;
     margin: 1em;
 }
 
 .options {
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    top: 30%;
-    right: 95%;
-    font-size: 1.5rem;
+    color: inherit; /*toma el color de su elemento padre*/
+    text-decoration: none;  /*quita la decoracion al texto*/
+    position: relative;     /*se aplica para poder aplicar el top y right*/
+    top: 30%;   /*define distancia de la parte de arriba del contenido al borde*/
+    right: 95%;     /*define la distancia desde el borde al lado derecho*/
+    font-size: 1.5rem;  /*tamaño*/
 
-    display: flex;
+    display: flex;      /*hacen responsive la clase .options*/
     flex-wrap: wrap;
     align-items: flex-start;
 
 }
 .options i:last-child {
-    font-size: 1.6rem;
+    font-size: 1.6rem;  /*define el tamaño del ultimo hijo de i en la clase .options*/
 }
 
 
 /* Big area */
 .big-hero img {
-    width: 150px;
+    width: 150px;   /*define el ancho de la imagen*/
 }
 
-.big-hero h2 {
-    font-size: 2em;
+.big-hero h2 {  /*se le aplica a todos los h2 dentro de la clase .big-hero*/
+    font-size: 2em;     /*define el tamaño de la fuente,el grosor del texto,el espaciado del texto y el margen superior*/
     font-weight: 700;
     letter-spacing: 0.002em;
     margin-top: 1em ;
 }
 
-.big-hero p {
+.big-hero p {   /*se le aplica a todos los elementos p dentro de .big-hero y define el color y el tamaño del texto*/
     font-size: 1em;;
     color: #D7DEE6;
 }
 
 /* Social links*/
-.social-links{
-    list-style: none;
-    padding: 0;
-    margin-top: 3em;
-    display: flex;
+.social-links{      /*se le aplica a toda la clase .social-links*/
+    list-style: none;   /*quita el estilo de la lista*/
+    padding: 0;     /*quita la distancia en el contenido*/
+    margin-top: 3em;    /*coloca un margen superior de 3em*/
+    display: flex;  /*hace que los elementos sean flexibles y que su direccion sea en filas y se centren los elementos*/
     flex-direction: row;
     justify-content: center;
 }
 
-.social-links li a{
+.social-links li a{ /*define el color y quita la decoracion del texto*/
     color: #D7DEE6;
     text-decoration: none; 
     /*Quite el font-size y lo aplique en una regla mas especifica*/
@@ -112,11 +112,11 @@ p{
     margin-top: 4em;   /*Aplicando un margen superior para dar distancia entre los botones y el area de los articulos*/
 }
 
-.post {
+.post {     /*define la distancia del contenido a 1em y el margen inferior a -2px*/
     padding: 1em;
     margin-bottom: -2px;
 }
-.post h2 {
+.post h2 {  /*transforma el texto a mayusculas, define el grosor del texto,el tamaño del texto y el margin a 1em*/
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
@@ -129,37 +129,37 @@ p{
     margin-left: 5%;   /*centrados los articulos*/ 
 }
 
-.post ul li {
+.post ul li {       /*define el tamaño minimo y maximo que puede tener los elementos y crea el margen a 2rem de anchos y un alto automatico*/
     min-height: 300px;
     max-width: 350px;
     margin: 2rem auto;
 }
 
 .post ul li article {
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #ffffff;
-    text-align: left;
-    padding-bottom: 2em;
+    overflow: hidden;   /*evita que se colapse el contenido*/
+    border-radius: 10px;    /*redondea los bordes de la caja*/
+    background-color: #ffffff;  /*define el color blanco*/
+    text-align: left; /*alinea el texto a la izquierda*/
+    padding-bottom: 2em;    /*define la distancia del contenido inferior a 2em*/
 }
 
-.post article img{
+.post article img{  /*define alto,ancho y hace que la imagen se ajuste a su contenedor*/
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
 
-.post article h3 {
+.post article h3 {  /*define el color, el margen inferior, la distancia del contenido al margen, el tamaño del texto*/
     color: #0D5061;
     margin-top: 2em;
     padding: 0em 1rem;
     font-size: 0.9em;
-    white-space: nowrap;
-    overflow: hidden;
+    white-space: nowrap;   /*reduce los espacios en balnco y evita saltos de linea*/ 
+    overflow: hidden;   /*evita el colapse de los elementos*/
     text-overflow: ellipsis;
 }
 
-.post article p {
+.post article p {   /*define color, tamaño del texto, distancia del contenido al margen y el alto de linea*/
     color:#112935;
     font-size: 0.75em;
     padding: 1rem;
@@ -182,7 +182,7 @@ p{
 
 }
 
-.about h2 {
+.about h2 { /*convierte el texto a mayusculas, define su grosor, y su tamaño del texto y crea un margen de 2em*/
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
@@ -194,39 +194,39 @@ p{
     width: 100%;    /*Definiendo que el texto ocupe el 100% del tamaño asignado*/
 }
 
-.bio-info img{ 
+.bio-info img{  /*coloca el ancho de la imagen de la clase .bio-info a 200px*/
     width: 200px;
 }
 
 
 .bio-info p{
-    font-size: 16px;
-    padding: 2em;
-    text-align: left;
-    line-height: 25px;
-    letter-spacing: 2px;
+    font-size: 16px; /*tamaño del texto*/
+    padding: 2em;   /*distancia del contenido al borde*/
+    text-align: left;   /*alinea el texto a la izquierda*/
+    line-height: 25px;  /*altura de la linea*/
+    letter-spacing: 2px;    /*espaciado del texto*/
 }
 
 .contact {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 0px 1em;
+    display: flex;  /*hace flexibles lo elementos*/
+    flex-direction: column; /*define la direcciona  columnas*/
+    text-align: left;   /*alinea el texto a la izquierda*/
+    padding: 0px 1em;   /*distancia del contenido del lado izquierdo al borde y del lado superior al borde*/
     width: 450px;  /*definiendo el tamaño del formulario*/
 }
 
 
 
 .contact * + * {
-    margin-top: 1.5em;
+    margin-top: 1.5em; /*crea un margen de 1.5em*/
 }
 
-.contact-form {
+.contact-form { /*hace que los elementos del formulario sean flexibles y su direccion vaya en columnas*/
     display: flex;
     flex-direction: column;
 }
 
-.contact-form input, .contact-form textarea{
+.contact-form input, .contact-form textarea{/*define la distancia entre los contenidos y los bordes, redondea los bordes, define un tamaño de texto y define que ocupe el 100% del espacio asignado*/
     padding: 1rem 2rem;
     border: none;
     border-radius: 0px 2em;
@@ -237,16 +237,16 @@ p{
 /* Decorando placeholder */
 
 ::-webkit-input-placeholder { 
-    color: #D7DEE6; 
+    color: #D7DEE6; /*define el color del texto del placeholder*/
 } 
  
-:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
+:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } /*define el color del texto del placeholder para firefox 18*/
  
-::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
+::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } /*define el color del texto del placeholder para firefox 19*/
  
-:-ms-input-placeholder { color: #D7DEE6; }
+:-ms-input-placeholder { color: #D7DEE6; } /*define el color del texto del placeholder para microsoft edge*/
 
-.contact-form input[type=submit] {
+.contact-form input[type=submit] {  /*define el color de fondo, el grosor del texto, el color del texto y el tamaño del texto del boton de summit del formulario*/
     background-color: #F74442;
     font-weight: 400;
     color: white;
@@ -257,20 +257,20 @@ p{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
-footer{
+footer{ /*define el color de fondo y el color del texto en el footer*/
     background-color: #0D5061;
     color:#D7DEE6;
 }
 
 footer .social-links {
-    margin: 0;
+    margin: 0;  /*define el margen entre los botones FAB pero solamente del footer*/
 }
 
 .menu li:hover a{  /*Esta regla se le aplica a los elementos a dentro de la li en la clase .menu*/
     color: red; /*color del hover al dar click con el mouse en el a*/
 }
 
-.menu {
+.menu { /*define el color de fondo, el tipo de posicionamiento, su distancia superior, su distancia derecha, su ancho y alto*/
     background-color: #112935;
     position: absolute;
     z-index: 20;
@@ -281,19 +281,19 @@ footer .social-links {
 }
 
 .menu {
-    list-style: none;
-    text-align: left;
-    padding: 1em;
+    list-style: none; /*quita el estilo a la lista*/
+    text-align: left;   /*alinea el texto a la izquierda*/
+    padding: 1em;   /*distancia del contenido hasta el borde*/
 }
 .menu li {
-    display: block;
-    padding: 0.5em;
-    margin-top: 5px;
+    display: block;     /*tipo de display de la lista*/
+    padding: 0.5em;     /*distancia del contenido hasta el borde*/
+    margin-top: 5px;    /*define el margen superior a 5px de tamaño*/
 }
 
-.menu li a{
-    color: white;
-    text-decoration: none;
+.menu li a{     
+    color: white;   /*aplica color blanco a los elementos a dentro de la li en el .menu*/
+    text-decoration: none;  /*quita la decoracion al texto*/
 }
 
 
@@ -303,35 +303,35 @@ footer .social-links {
 @media only screen and (min-width: 768px) {
   
     .post ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 5%;
+        list-style: none; /*quita el estilo a la ul*/
+        display: flex;  /*hace los elemento de la ul flexibles*/
+        flex-wrap: wrap;    /*hace que el diseño sea responsive*/
+        justify-content: center;    /*centra los elementos*/
+        margin-left: 5%;    /*define el margen izquierdo a 5%*/
     }
     
-    .post ul li {
+    .post ul li {   /*define el ancho minimo y el alto maximo, el margen izquierdo y el superior, */
         min-height: 350px;
         max-height: 3500px;
         margin: 1rem 2rem;
-        flex: 1 0 300px;
+        flex: 1 0 300px; /*hace flexible a estas dimensiones la lista*/
     }
 
 
-    .logo {
+    .logo { /*define el ancho y el margen de la imagen del logo*/
         width: 150px;
         margin: 1.5em;
     }
 
     .show-desktop {
-        display: block;
+        display: block; /*define el tipo de display a tipo en bloque*/
     }
 
     .hide-desktop {
-        display: none;
+        display: none; /*quita el display*/
     }
 
-    .menu {
+    .menu { /*define el color de fondo, el tipo de posicionamiento,su ancho y alto, su tipo de display y el margin superior a 1em*/
         background-color: #112935; 
         position: static;
         z-index: 20;
@@ -371,7 +371,7 @@ footer .social-links {
 }
 
 @media only screen and (min-width: 1440px) {
-    .container {
+    .container {    /*define el espacio que ocupara en pantalla, el margen y su ancho maximo*/
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
