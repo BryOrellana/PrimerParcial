@@ -75,14 +75,13 @@ p{
 .big-hero p {
     font-size: 1em;;
     color: #D7DEE6;
-    padding: 0;
 }
 
 /* Social links*/
 .social-links{
     list-style: none;
     padding: 0;
-    margin-top: 1em;
+    margin-top: 3em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -90,27 +89,28 @@ p{
 
 .social-links li a{
     color: #D7DEE6;
-    text-decoration: none;
+    text-decoration: none; 
+    /*Quite el font-size y lo aplique en una regla mas especifica*/
 }
 
 .social-links li a i{
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 6em;
+    margin-left: 20px;   /*Aplico el mismo margen del lado izquierdo y derecho para que la separacion*/
+    margin-right: 20px;  /*entre botones FAB sea igual*/
+    font-size: 6em;      /*Configuro el tamaño de los botones FAB a 6em*/                 
+         
 }
 
-.big-hero .show-desktop{
-    position: relative;
-    top:-30px;
-    color: #0AC693;
-    font-size: 7em;
+.big-hero .show-desktop{  /*Especificando que la regla se aplique solo a lo que contenga la clase .show-desktop dentro de la clase .big-hero*/  
+    position: relative;   /*Modificando la posicion para aplicar el top a -30px para dar distancia vertical entre*/
+    top:-30px;            /*los botones de FAB de github y twitter*/
+    color: #0AC693;     
+    font-size: 7em;       /*Tamaño del boton*/  
 }
 
 .green-area {
     background-color: #0AC693; 
-    margin-top: 4em;
+    margin-top: 4em;   /*Aplicando un margen superior para dar distancia entre los botones y el area de los articulos*/
 }
-
 
 .post {
     padding: 1em;
@@ -125,8 +125,8 @@ p{
 
 .post ul {
     list-style: none;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 5%;  /*Aplicando margenes a la derecha e izquierda para que al ver la web desde movil aparezcan*/
+    margin-left: 5%;   /*centrados los articulos*/ 
 }
 
 .post ul li {
@@ -170,15 +170,15 @@ p{
 
 .about{
     margin-top: 2em;
-    overflow: hidden;
-    margin-bottom: 4%;
+    overflow: hidden;   /*Se aplico para que no se desbordara el contenido de la pagina*/
+    margin-bottom: 4%;  /*Crea la distancia entre el footer y el contenido de esta seccion*/
 }
 
-.about .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.about .container{      /*Especificando que la regla se aplique solo en la clase .container que pertenezca a la clase .about*/
+    display: flex;      /*Definiendo el tipo de display*/
+    flex-direction: row;    /*Definiendo la direccion en la que ira el contenido para poder poner juntos el logo y la descripcion con el formulario*/
+    flex-wrap: wrap;        /*haciendo que este container sea responsive*/
+    justify-content: space-around;  /*justificando la distancia entre los contenidos del container*/
 
 }
 
@@ -190,8 +190,8 @@ p{
 }
 
 .about h2{
-    text-align: center;
-    width: 100%;
+    text-align: center; /*Centando el texto de la descripcion*/
+    width: 100%;    /*Definiendo que el texto ocupe el 100% del tamaño asignado*/
 }
 
 .bio-info img{ 
@@ -212,7 +212,7 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
-    width: 450px;
+    width: 450px;  /*definiendo el tamaño del formulario*/
 }
 
 
@@ -260,15 +260,14 @@ p{
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
-    padding: 0px;
 }
 
 footer .social-links {
     margin: 0;
 }
 
-.menu li:hover a{
-    color: red;
+.menu li:hover a{  /*Esta regla se le aplica a los elementos a dentro de la li en la clase .menu*/
+    color: red; /*color del hover al dar click con el mouse en el a*/
 }
 
 .menu {
@@ -342,32 +341,32 @@ footer .social-links {
         margin-top: 1em;
     }
     
-    .big-hero .social-links li a i{
-        position: relative;
-        top:-20px;
+    .big-hero .social-links li a i{     
+        position: relative; /*poniendo la posicion como relative para poder asignar el top a los botones fab para */
+        top:-20px;  /*crear una distancia entre el green area y los botones cuando se vea en una pantalla de min 768px de ancho*/
     }
 
     .bio-info{
-        width: 525px;
+        width: 525px;   /*Asignando el ancho de donde esta el logo y la descripcion para una pantalla de 768px de ancho*/
     }
 } 
 
 @media only screen and (min-width: 1024px) {
 
-    .post ul{
+    .post ul{           /*Haciendo que el area de post sea responsive*/
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .post ul:last-child{
-        justify-content: left;
-        margin-left: 5%;
+    .post ul:last-child{    /*esta regla se aplica al ultimo hijo de la ul*/
+        justify-content: left;  /*y coloca al ultimo hijo de la ul al lado izquierdo conservando el espaciado de los elementos*/
+        margin-left: 5%;    /*Ajustando el margen izquierdo*/
     }
 
     .post article{
-        width: auto;
+        width: auto;    /*poniendo que el tamaño de los articulos sea automatico segun el zoom*/
     }
 }
 
@@ -378,7 +377,7 @@ footer .social-links {
         max-width: 1440px;
     }
 
-    .post ul{
+    .post ul{       /*Haciendo que el area de post y la ul sean responsive*/
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
